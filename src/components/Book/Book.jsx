@@ -91,8 +91,8 @@ const Page = ({
 }) => {
   // Load front/back only (removed roughness)
   const textures = useTexture({
-    front: `/textures/${front}.jpg`,
-    back: `/textures/${back}.jpg`,
+    front: `textures/${front}.jpg`,
+    back: `textures/${back}.jpg`,
   });
   textures.front.colorSpace = SRGBColorSpace;
   textures.back.colorSpace = SRGBColorSpace;
@@ -434,10 +434,10 @@ export const Book = forwardRef(({ pages, ...props }, ref) => {
 
   useEffect(() => {
     pages.forEach((p) => {
-      useTexture.preload(`/textures/${p.front}.jpg`);
-      useTexture.preload(`/textures/${p.back}.jpg`);
+      useTexture.preload(`textures/${p.front}.jpg`);
+      useTexture.preload(`textures/${p.back}.jpg`);
     });
-    useTexture.preload(`/textures/ruled-paper.jpg`);
+    useTexture.preload(`textures/ruled-paper.jpg`);
   }, [pages]);
 
   useEffect(() => {

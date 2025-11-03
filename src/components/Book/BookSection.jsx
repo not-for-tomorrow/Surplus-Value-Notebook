@@ -14,11 +14,11 @@ const BookSection = forwardRef((props, ref) => {
 
   useEffect(() => {
     pages.forEach((p) => {
-      useTexture.preload(`/textures/${p.front}.jpg`);
-      useTexture.preload(`/textures/${p.back}.jpg`);
+      useTexture.preload(`textures/${p.front}.jpg`);
+      useTexture.preload(`textures/${p.back}.jpg`);
     });
-    useTexture.preload(`/textures/book-cover-roughness.jpg`);
-    useTexture.preload(`/textures/ruled-paper.jpg`);
+    useTexture.preload(`textures/book-cover-roughness.jpg`);
+    useTexture.preload(`textures/ruled-paper.jpg`);
   }, [pages]);
 
   return (

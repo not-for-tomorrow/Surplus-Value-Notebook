@@ -99,12 +99,12 @@ export const DescriptionSection = () => {
   // Preload textures
   useEffect(() => {
     pages.forEach((p) => {
-      useTexture.preload(`/textures/${p.front}.jpg`);
-      useTexture.preload(`/textures/${p.back}.jpg`);
+      useTexture.preload(`textures/${p.front}.jpg`);
+      useTexture.preload(`textures/${p.back}.jpg`);
     });
-    if (bookmark.front) useTexture.preload(`/textures/${bookmark.front}.jpg`);
-    if (bookmark.back) useTexture.preload(`/textures/${bookmark.back}.jpg`);
-    useTexture.preload(`/textures/ruled-paper.jpg`);
+    if (bookmark.front) useTexture.preload(`textures/${bookmark.front}.jpg`);
+    if (bookmark.back) useTexture.preload(`textures/${bookmark.back}.jpg`);
+    useTexture.preload(`textures/ruled-paper.jpg`);
   }, [pages, bookmark.front, bookmark.back]);
 
   const cameraPos = useMemo(

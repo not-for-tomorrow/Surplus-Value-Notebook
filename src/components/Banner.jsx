@@ -4,9 +4,9 @@ export const Banner = () => {
   // Thay các đường dẫn ảnh bằng ảnh thật của bạn
   const SLIDES = useMemo(
     () => [
-      "/textures/banner-1.jpg",
-      "/textures/bannertest1.jpg",
-      "/textures/bannertest2.jpg",
+      "textures/banner-1.jpg",
+      "textures/bannertest1.jpg",
+      "textures/bannertest2.jpg",
     ],
     []
   );

@@ -17,13 +17,13 @@ export const Bookmark = (props) => {
 
   // Preload to avoid flicker
   useEffect(() => {
-    useTexture.preload(`/textures/${front}.jpg`);
-    useTexture.preload(`/textures/${back}.jpg`);
+    useTexture.preload(`textures/${front}.jpg`);
+    useTexture.preload(`textures/${back}.jpg`);
   }, [front, back]);
 
   const textures = useTexture({
-    front: `/textures/${front}.jpg`,
-    back: `/textures/${back}.jpg`,
+    front: `textures/${front}.jpg`,
+    back: `textures/${back}.jpg`,
   });
 
   textures.front.flipY = false;

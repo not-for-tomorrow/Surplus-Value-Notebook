@@ -53,19 +53,19 @@ const BookTypeSection = forwardRef(function BookTypeSection(
   {
     models = [
       {
-        url: "/models/Notebook1.glb",
+        url: "models/Notebook1.glb",
         name: "Sản phẩm 1",
         description: "Mô tả 1",
         scale: 5,
       },
       {
-        url: "/models/Notebook2.glb",
+        url: "models/Notebook2.glb",
         name: "Sản phẩm 2",
         description: "Mô tả 2",
         scale: 0.007,
       },
       {
-        url: "/models/Notebook3.glb",
+        url: "models/Notebook3.glb",
         name: "Sản phẩm 3",
         description: "Mô tả 3",
         scale: 0.006,

@@ -4,6 +4,7 @@ import React, {
   useRef,
   useState,
   Suspense,
+  useEffect,
 } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
@@ -62,13 +63,19 @@ const BookTypeSection = forwardRef(function BookTypeSection(
         url: "models/Notebook2.glb",
         name: "Sản phẩm 2",
         description: "Mô tả 2",
-        scale: 0.007,
+        scale: 0.006,
       },
       {
         url: "models/Notebook3.glb",
         name: "Sản phẩm 3",
         description: "Mô tả 3",
-        scale: 0.006,
+        scale: 0.0055,
+      },
+      {
+        url: "models/Notebook4.glb",
+        name: "Sản phẩm 3",
+        description: "Mô tả 3",
+        scale: 8,
       },
     ],
     className = "",
@@ -82,10 +89,30 @@ const BookTypeSection = forwardRef(function BookTypeSection(
   const count = models.length;
   const containerRef = useRef(null);
 
+  // 👉 Lưu hướng điều hướng: 1 = next, -1 = prev
+  const dirRef = useRef(1);
+
   // 👉 Điều khiển từ bên ngoài
-  const next = () => setIndex((i) => (i + 1) % count);
-  const prev = () => setIndex((i) => (i - 1 + count) % count);
+  const next = () => {
+    dirRef.current = 1;
+    setIndex((i) => (i + 1) % count);
+  };
+  const prev = () => {
+    dirRef.current = -1;
+    setIndex((i) => (i - 1 + count) % count);
+  };
   useImperativeHandle(ref, () => ({ next, prev }));
+
+  // 🔧 Lưu index trước đó để biết item nào rời trung tâm
+  const prevIndexRef = useRef(0);
+  useEffect(() => {
+    prevIndexRef.current = index;
+  }, [index]);
+
+  // 🔧 Lưu rotateY cuối cùng của mỗi item để "đóng băng" khi không entering/leaving
+  const lastRotateYRef = useRef(
+    models.map((_, i) => (i === 0 ? Math.PI : 0)) // sản phẩm 1 luôn 180°
+  );
 
   return (
     <section
@@ -133,50 +160,70 @@ const BookTypeSection = forwardRef(function BookTypeSection(
 
           {/* 🌀 Hiệu ứng chuyển sản phẩm */}
           <Suspense fallback={null}>
-  {models.map((m, i) => {
-    // Tính offset vòng tròn (carousel loop)
-    // Nếu index = 2, i = 0 => offset = -2 (model đầu về bên trái)
-    // Nếu index = 2, i = 2 => offset = 0 (model cuối ở giữa)
-    let offset = i - index;
-    // Nếu offset > count/2, đưa về vòng sau
-    if (offset > count / 2) offset -= count;
-    if (offset < -count / 2) offset += count;
+            {models.map((m, i) => {
+              // Tính offset vòng tròn với tie-break theo hướng điều hướng
+              const half = count / 2;
 
-    const isActive = i === index;
+              let offset = i - index;
+              if (offset > half) offset -= count;
+              if (offset < -half) offset += count;
 
-    const targetX = offset * 2.5;
-    const targetZ = Math.abs(offset) * -2;
+              // FIX: với số chẵn và |offset| === half, chọn phía dựa vào hướng
+              if (count % 2 === 0 && Math.abs(offset) === half) {
+                // next => đẩy item "đối diện" sang bên trái; prev => sang bên phải
+                offset = dirRef.current === 1 ? -half : half;
+              }
 
-    // Chỉ sản phẩm số 1 bị xoay Y 180 độ
-    const rotateY = i === 0 ? Math.PI : offset * 0.4;
+              const isActive = i === index;
+              const wasActive = i === prevIndexRef.current;
+              const isEnteringOrLeaving = isActive || wasActive;
 
-    return (
-      <group key={m.url}>
-        <motion.group
-          initial={false}
-          animate={{
-            x: targetX,
-            z: targetZ,
-            y: 0,
-            rotateY,
-            rotateX: Math.PI / 3,
-            scale: isActive ? 1 : 0.8,
-            opacity: isActive ? 1 : 0.6,
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 80,
-            damping: 12,
-          }}
-        >
-          <Center>
-            <GLTFModel url={m.url} scale={m.scale ?? 1} />
-          </Center>
-        </motion.group>
-      </group>
-    );
-  })}
-</Suspense>
+              const targetX = offset * 2.5;
+              const targetZ = Math.abs(offset) * -2;
+
+              // Tính rotateY theo quy tắc cũ
+              let rotateY;
+              if (i === 0) {
+                rotateY = Math.PI;
+              } else if (isEnteringOrLeaving) {
+                rotateY = offset * 0.4; // active ở giữa => 0, hai bên => ±0.4
+              } else {
+                rotateY = lastRotateYRef.current[i];
+              }
+
+              // Cập nhật bộ nhớ rotateY cho lần render sau
+              lastRotateYRef.current[i] = rotateY;
+
+              return (
+                <group key={m.url}>
+                  <motion.group
+                    initial={false}
+                    animate={{
+                      x: targetX,
+                      z: targetZ,
+                      y: 0,
+                      rotateY,
+                      rotateX: Math.PI / 3,
+                      scale: isActive ? 1 : 0.8,
+                      opacity: isActive ? 1 : 0.6,
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 80,
+                      damping: 12,
+                      rotateY: isEnteringOrLeaving
+                        ? { type: "spring", stiffness: 70, damping: 10 }
+                        : { duration: 0 },
+                    }}
+                  >
+                    <Center>
+                      <GLTFModel url={m.url} scale={m.scale ?? 1} />
+                    </Center>
+                  </motion.group>
+                </group>
+              );
+            })}
+          </Suspense>
           {/* 👁️ Điều khiển camera */}
           {/* <OrbitControls enableZoom={false} enablePan={false} /> */}
         </Canvas>

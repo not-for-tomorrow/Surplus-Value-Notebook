@@ -37,7 +37,7 @@ export const BOOK_LIBRARY = [
       innerRuledCount: 10,
       ruledTexture: "ruled-paper",
     }),
-    bookmark: { front: "bookmark-2-thien", back: "bookmark-2-thien" },
+    bookmark: { front: "bookmark-1-thien", back: "bookmark-2-thien" },
     story: {
       title: "Khởi nguồn ý tưởng",
       paragraphs: [
@@ -55,7 +55,7 @@ export const BOOK_LIBRARY = [
       innerRuledCount: 10,
       ruledTexture: "ruled-paper",
     }),
-    bookmark: { front: "bookmark-1-thien", back: "bookmark-1-thien" },
+    bookmark: { front: "bookmark-3-thien", back: "bookmark-4-thien" },
     story: {
       title: "Tối ưu quy trình",
       paragraphs: [

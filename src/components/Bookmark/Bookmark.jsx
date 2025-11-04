@@ -1,11 +1,11 @@
-// src/components/Bookmark/Bookmark.jsx
 import { useFrame } from "@react-three/fiber";
-import { useRef, useMemo, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { useAtom } from "jotai";
 import { easing } from "maath";
 import { currentBookAtom, BOOK_LIBRARY } from "../../state/library";
 import { useTexture } from "@react-three/drei";
 import { bookmarkFaceAtom } from "./UI";
+import * as THREE from "three";
 
 export const Bookmark = (props) => {
   const meshRef = useRef();
@@ -26,8 +26,13 @@ export const Bookmark = (props) => {
     back: `textures/${back}.jpg`,
   });
 
-  textures.front.flipY = false;
-  textures.back.flipY = false;
+  // Không cần flipY = false cho ảnh tĩnh; để mặc định là true.
+  // Sửa hiện tượng lật gương theo trục X:
+  [textures.front, textures.back].forEach((t) => {
+    t.wrapS = THREE.RepeatWrapping;
+    t.center.set(0.5, 0.5);
+    t.repeat.x = 1; // lật theo trục X để chữ không bị mirror
+  });
 
   useFrame((_, delta) => {
     const targetRotation = face === 1 ? Math.PI : 0;
@@ -35,7 +40,8 @@ export const Bookmark = (props) => {
   });
 
   return (
-    <group {...props} rotation={[Math.PI, 0, 0]}>
+    // Bỏ xoay 180° theo trục X để tránh đảo chiều tổng thể
+    <group {...props}>
       <mesh ref={meshRef} castShadow receiveShadow>
         <boxGeometry args={[0.6, 1.8, 0.005]} />
         <meshStandardMaterial attach="material-0" color="#dddddd" />

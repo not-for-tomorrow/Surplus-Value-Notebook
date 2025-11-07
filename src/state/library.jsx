@@ -32,17 +32,18 @@ export const BOOK_LIBRARY = [
     id: "biz",
     title: "Notebook 01",
     pages: buildNotebookPages({
-      coverFront: "page-1-thien",
-      coverBack: "page-2-thien",
+      coverFront: "thien-page-1",
+      coverBack: "thien-page-2",
       innerRuledCount: 10,
       ruledTexture: "ruled-paper",
     }),
-    bookmark: { front: "bookmark-1-thien", back: "bookmark-2-thien" },
+    bookmark: { front: "thien-bookmark-1", back: "thien-bookmark-2" },
     story: {
-      title: "Khởi nguồn ý tưởng",
+      title: "Capital & Labour",
       paragraphs: [
-        "Cuốn sổ mở đầu cho hành trình ghi chép tư duy kinh doanh, nơi mọi ý tưởng thô sơ được nhen nhóm.",
-        "Từ bản phác thảo đầu tiên đến kế hoạch hành động, từng trang là một bước gần hơn tới sản phẩm thật.",
+        "Bức ảnh Capital & Labour là một hình ảnh châm biếm kinh điển minh họa sự bóc lột giai cấp trong xã hội công nghiệp.",
+        "Ý tưởng: Thể hiện rõ ràng rằng sự giàu có và quyền lực của giới Tư bản (người đàn ông béo, sang trọng ngồi trên cao) được xây dựng và duy trì hoàn toàn bằng sức lực của giới Lao động (bốn công nhân oằn mình gánh đỡ ở dưới).",
+        "Nhận xét: Bức ảnh này là biểu tượng mạnh mẽ của sự bất công và đấu tranh giai cấp, lý tưởng cho một notebook dùng để nghiên cứu các vấn đề xã hội. Nó đóng vai trò như lời nhắc nhở trực quan về sự bóc lột, kích thích tư duy phản biện. Cuối cùng, phong cách biếm họa cổ điển khiến cuốn sổ trở nên độc đáo và thu hút sự chú ý.",
       ],
     },
   },
@@ -50,17 +51,18 @@ export const BOOK_LIBRARY = [
     id: "book-02",
     title: "Notebook 02",
     pages: buildNotebookPages({
-      coverFront: "page-3-thien",
-      coverBack: "page-4-thien",
+      coverFront: "thien-page-3",
+      coverBack: "thien-page-4",
       innerRuledCount: 10,
       ruledTexture: "ruled-paper",
     }),
-    bookmark: { front: "bookmark-3-thien", back: "bookmark-4-thien" },
+    bookmark: { front: "thien-bookmark-3", back: "thien-bookmark-4" },
     story: {
-      title: "Tối ưu quy trình",
+      title: "GROWING",
       paragraphs: [
-        "Cuốn số 2 tập trung vào luồng công việc: tiêu chuẩn hoá, đo lường, và cải thiện liên tục.",
-        "Mỗi ghi chú là một thử nghiệm nhỏ dẫn đến hiệu quả lớn.",
+        "Bức ảnh GROWING là một minh họa kỹ thuật số lạc quan, thể hiện quá trình tăng trưởng tài chính và sự nghiệp.",
+        "Ý tưởng: Minh họa hành trình thành công, nơi một doanh nhân (người đàn ông mặc vest) đang bước lên các nấc thang lợi nhuận (các cột biểu đồ), tượng trưng cho sự tiến bộ và việc đầu tư sinh lời (các cây tiền và đồng xu vàng).",
+        "Nhận xét: Bức ảnh có tính động lực cao, sử dụng màu sắc tươi sáng và biểu tượng rõ ràng (mũi tên lên, tiền xu) để truyền tải thông điệp về chuyên nghiệp, phát triển không ngừng và đạt được mục tiêu tài chính.",
       ],
     },
   },
@@ -68,12 +70,12 @@ export const BOOK_LIBRARY = [
     id: "book-03",
     title: "Notebook 03",
    pages: buildNotebookPages({
-      coverFront: "page-1-khang",
-      coverBack: "page-2-khang",
+      coverFront: "khang-page-1",
+      coverBack: "khang-page-2",
       innerRuledCount: 10,
       ruledTexture: "ruled-paper",
     }),
-    bookmark: { front: "bookmark-2-khang", back: "bookmark-1-khang" },
+    bookmark: { front: "khang-bookmark-1", back: "khang-bookmark-1" },
     story: {
       title: "Đồng sáng tạo",
       paragraphs: [
@@ -86,12 +88,12 @@ export const BOOK_LIBRARY = [
     id: "book-04",
     title: "Notebook 04",
     pages: buildNotebookPages({
-      coverFront: "book-cover",
-      coverBack: "book-back",
+      coverFront: "khang-page-4",
+      coverBack: "khang-page-3",
       innerRuledCount: 10,
       ruledTexture: "ruled-paper",
     }),
-    bookmark: { front: "book-cover", back: "book-back" },
+    bookmark: { front: "khang-bookmark-2", back: "khang-bookmark-2" },
     story: {
       title: "Thiết kế trải nghiệm",
       paragraphs: [
@@ -104,12 +106,12 @@ export const BOOK_LIBRARY = [
     id: "book-05",
     title: "Notebook 05",
     pages: buildNotebookPages({
-      coverFront: "page-1-phu",
-      coverBack: "page-2-phu",
+      coverFront: "phu-page-1",
+      coverBack: "phu-page-2",
       innerRuledCount: 10,
       ruledTexture: "ruled-paper",
     }),
-    bookmark: { front: "bookmark-1-phu", back: "bookmark-2-phu" },
+    bookmark: { front: "phu-bookmark-1", back: "phu-bookmark-2" },
     story: {
       title: "Dữ liệu dẫn đường",
       paragraphs: [
@@ -176,8 +178,8 @@ export const BOOK_LIBRARY = [
     id: "book-09",
     title: "Notebook 09",
     pages: buildNotebookPages({
-      coverFront: "book-cover",
-      coverBack: "book-back",
+      coverFront: "huy-page-1",
+      coverBack: "huy-page-2",
       innerRuledCount: 10,
       ruledTexture: "ruled-paper",
     }),
@@ -194,12 +196,12 @@ export const BOOK_LIBRARY = [
     id: "book-10",
     title: "Notebook 10",
     pages: buildNotebookPages({
-      coverFront: "book-cover",
-      coverBack: "book-back",
+      coverFront: "huy-page-4",
+      coverBack: "huy-page-3",
       innerRuledCount: 10,
       ruledTexture: "ruled-paper",
     }),
-    bookmark: { front: "book-cover", back: "book-back" },
+    bookmark: { front: "huy-bookmark-3", back: "huy-bookmark-4" },
     story: {
       title: "Tổng kết hành trình",
       paragraphs: [

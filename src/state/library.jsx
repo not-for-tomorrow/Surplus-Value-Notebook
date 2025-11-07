@@ -183,12 +183,13 @@ export const BOOK_LIBRARY = [
       innerRuledCount: 10,
       ruledTexture: "ruled-paper",
     }),
-    bookmark: { front: "book-cover", back: "book-back" },
+    bookmark: { front: "huy-bookmark-1", back: "huy-bookmark-1" },
     story: {
-      title: "Sản phẩm và thị trường",
+      title: "Dưới Bóng Gót Lãnh Đạo",
       paragraphs: [
-        "Ghi chú về định vị, phân khúc, và phản hồi thị trường.",
-        "Sự phù hợp sản phẩm-thị trường được xây dựng từng giả thuyết nhỏ.",
+        "Ẩn dụ trực diện về việc giá trị do lao động tạo ra bị nén lại ở dưới, trong khi quyền lực và hưởng thụ tập trung ở trên.",
+        "Ý tưởng: Đặt ở trang mở đầu sổ tay kinh tế–chính trị hoặc làm nhãn kẹp trang kèm câu gợi nhớ “Ai nâng, ai đứng?” để mỗi lần mở sổ đều được nhắc về cơ chế tạo–chiếm giá trị thặng dư và động lực tìm phương án phân phối công bằng hơn.",
+        "Nhận xét: Phông xanh lạnh đối lập với khối đen của chiếc giày khiến cảm giác áp lực tăng cao, còn hình dáng nhỏ bé của những người đội giày nhấn mạnh tương quan quyền lực. Vali và cà vạt cho thấy họ là những người làm công tri thức nhưng vẫn thành “vật chống đỡ” của hệ thống.",
       ],
     },
   },
@@ -203,10 +204,11 @@ export const BOOK_LIBRARY = [
     }),
     bookmark: { front: "huy-bookmark-3", back: "huy-bookmark-4" },
     story: {
-      title: "Tổng kết hành trình",
+      title: "Ai Tạo – Ai Hưởng?",
       paragraphs: [
-        "Một chặng đường tròn vẹn: bài học, sai lầm, và khoảnh khắc đáng nhớ.",
-        "Điểm dừng để bắt đầu một hành trình mới với trải nghiệm sâu sắc hơn.",
+        "Một nhân vật phì nộn, ngậm xì gà, khoác ruy-băng đỏ đứng dạng tay đè lên những thân người gầy guộc – hình ảnh cô đọng sự bất bình đẳng và hành vi chiếm đoạt phần giá trị lao động của kẻ khác.",
+        "Ý tưởng: Đưa vào sổ tay như một “tấm nhắc”: mở ra là thấy cấu trúc bóc lột – câu hỏi bật lên: “Ai tạo ra? Ai hưởng?” khơi gợi suy nghĩ về phân phối công bằng.",
+        "Nhận xét: Sự phóng đại tỉ lệ cơ thể làm nổi bật lòng tham và quyền lực phình to từ nền lao động bị ép; động tác dẫm lên thân người tạo biểu tượng trực diện của lệ thuộc cưỡng ép; nét vẽ châm biếm sắc gọn khiến người xem vừa bật cười chua chát vừa suy ngẫm về cơ chế tạo ra giá trị thặng dư.",
       ],
     },
   },

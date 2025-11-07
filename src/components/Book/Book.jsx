@@ -401,12 +401,12 @@ const materials = [
         scale={isCover ? [1.02, 1.04, coverScaleZ] : [1.0, 1.0, 1.0]}
       />
 
-      {/* "NOTEBOOK" title on the front cover */}
+      {/* "NOTEBOOK" title on the front cover
       {isCover && number === 0 && (
         <Text
           position={[
             PAGE_WIDTH * 0.5,
-            PAGE_HEIGHT * 0.32,
+            PAGE_HEIGHT * 0.35,
             -number * PAGE_DEPTH + page * PAGE_DEPTH + PAGE_DEPTH * 1.52,
           ]}
           fontSize={0.22}
@@ -418,7 +418,7 @@ const materials = [
         >
           NOTEBOOK
         </Text>
-      )}
+      )} */}
     </group>
   );
 };

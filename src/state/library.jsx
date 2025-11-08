@@ -124,12 +124,12 @@ export const BOOK_LIBRARY = [
     id: "book-06",
     title: "Notebook 06",
     pages: buildNotebookPages({
-      coverFront: "book-cover",
-      coverBack: "book-back",
+      coverFront: "phu-page-3",
+      coverBack: "phu-page-4",
       innerRuledCount: 10,
       ruledTexture: "ruled-paper",
     }),
-    bookmark: { front: "book-cover", back: "book-back" },
+    bookmark: { front: "phu-bookmark-3", back: "phu-bookmark-4" },
     story: {
       title: "Tăng trưởng bền vững",
       paragraphs: [
@@ -142,12 +142,12 @@ export const BOOK_LIBRARY = [
     id: "book-07",
     title: "Notebook 07",
     pages: buildNotebookPages({
-      coverFront: "book-cover",
-      coverBack: "book-back",
+      coverFront: "long-page-1",
+      coverBack: "long-page-2",
       innerRuledCount: 10,
       ruledTexture: "ruled-paper",
     }),
-    bookmark: { front: "book-cover", back: "book-back" },
+    bookmark: { front: "long-bookmark-1", back: "long-bookmark-1" },
     story: {
       title: "Câu chuyện thương hiệu",
       paragraphs: [
@@ -160,12 +160,12 @@ export const BOOK_LIBRARY = [
     id: "book-08",
     title: "Notebook 08",
     pages: buildNotebookPages({
-      coverFront: "book-cover",
-      coverBack: "book-back",
+      coverFront: "long-page-3",
+      coverBack: "long-page-4",
       innerRuledCount: 10,
       ruledTexture: "ruled-paper",
     }),
-    bookmark: { front: "book-cover", back: "book-back" },
+    bookmark: { front: "long-bookmark-2", back: "long-bookmark-2" },
     story: {
       title: "Tự động hoá thông minh",
       paragraphs: [

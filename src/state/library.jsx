@@ -158,10 +158,10 @@ export const BOOK_LIBRARY = [
     }),
     bookmark: { front: "long-bookmark-1", back: "long-bookmark-1" },
     story: {
-      title: "Câu chuyện thương hiệu",
+      title: "Money & Chains",
       paragraphs: [
-        "Xây dựng bản sắc: giá trị cốt lõi, giọng điệu, và lời hứa thương hiệu.",
-        "Từng trang là đoạn văn trong cuốn truyện kể cho khách hàng.",
+        "Ý tưởng: Tập trung khắc họa sự đối lập rõ rệt giữa giới Tư bản và giới Lao động. Mặt trước là hình ảnh ông chủ béo tốt, ăn mặc sang trọng, biểu tượng cho quyền lực và của cải; mặt sau là những công nhân đổ mồ hôi trong nhà máy tối tăm – nền tảng thật sự của xã hội công nghiệp.",
+        "Nhận xét: Bố cục hai mặt mang ý nghĩa đối nghịch mạnh mẽ: sự xa hoa bên trên được xây bằng mồ hôi và sức lực bên dưới. Hình ảnh phản ánh trung thực mối quan hệ bất công trong thời kỳ công nghiệp hóa, rất thích hợp cho notebook chuyên về lịch sử, kinh tế chính trị hoặc xã hội học.",
       ],
     },
   },
@@ -176,10 +176,10 @@ export const BOOK_LIBRARY = [
     }),
     bookmark: { front: "long-bookmark-2", back: "long-bookmark-2" },
     story: {
-      title: "Tự động hoá thông minh",
+      title: "Deformed by Industry",
       paragraphs: [
-        "Ghi lại các quy tắc, bot, và workflow tự động hoá để tiết kiệm thời gian.",
-        "Con người tập trung sáng tạo, máy móc xử lý lặp lại.",
+        "Ý tưởng: Biếm họa hóa sự tha hóa của con người trong thời đại công nghiệp – khi lao động không còn giải phóng mà trở thành xiềng xích bóp méo nhân tính.",
+        "Nhận xét: Phong cách châm biếm cổ điển gợi cảm giác vừa hài hước vừa u ám, khiến notebook trở thành công cụ kích thích tư duy về bản chất của lao động và thân phận con người trong guồng máy kinh tế.",
       ],
     },
   },

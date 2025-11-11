@@ -7,6 +7,7 @@ import { DescriptionSection } from "./components/Description/DescriptionSection"
 import BookTypeSection from "./components/Booktype/BookTypeSection";
 import { Footer } from "./components/Footer";
 import Introduction from "./components/Introduction"; // Thêm dòng này
+import Applicability from "./components/Applicability";
 import ShowTechnology from "./components/Showtechnology/Showtechnology";
 import ShowBannerTechnology from "./components/Showtechnology/Showbannertechnology";
 import "./index.css";
@@ -36,6 +37,9 @@ function App() {
         <BookTypeSection
           canvasHeight="800px"
         />
+
+        <Applicability/>
+        
         <ShowBannerTechnology/>
         <ShowTechnology />
         

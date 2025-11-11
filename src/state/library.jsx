@@ -98,10 +98,11 @@ export const BOOK_LIBRARY = [
     }),
     bookmark: { front: "khang-bookmark-2", back: "khang-bookmark-2" },
     story: {
-      title: "Thiết kế trải nghiệm",
+      title: "Bức tranh mô tả một dây chuyền sản xuất",
       paragraphs: [
-        "Tập trung vào hành trình người dùng: bản đồ hoá touchpoint và khoảnh khắc chân thật.",
-        "Mỗi phác thảo là một nguyên mẫu đợi được kiểm chứng.",
+        "-Bên dưới, là hàng loạt công nhân cần mẫn làm việc ở chế độ lặp đi lặp lại, máy móc biến thao tác của họ thành sản phẩm trên băng chuyền, rồi sản phẩm ấy được chuyển hóa thành tiền và theo thời gian tích lũy giá trị mới từ sản phẩm mà người lao động tạo ra chất thành những cọc tiền cao ở dây chuyền bên cạnh. ",
+        "-Trên cao, người đại diện cho nhà tư bản đứng nhìn và bỏ tiền đầu tư rồi thu gom lại nhiều đồng tiền hơn — biểu tượng cho việc chiếm đoạt giá trị thặng dư. ",
+        "Hình tượng này minh họa trực quan luận điểm của Mác: tư bản khả biến lao động sống (con người) tạo ra giá trị mới, trong khi tư bản bất biến (máy móc, nguyên liệu) chỉ chuyển giá trị có sẵn; phần giá trị dư ra (giá trị thặng dư) bị chủ sở hữu tư bản chiếm đoạt và tích luỹ. Hình ảnh cũng là việc ám chỉ cách nhà tư bản dùng tiền để sinh ra nhiều tiền hơn",
       ],
     },
   },

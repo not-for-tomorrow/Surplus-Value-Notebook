@@ -6,6 +6,9 @@ import BookmarkSection from "./components/Bookmark/BookmarkSection";
 import { DescriptionSection } from "./components/Description/DescriptionSection";
 import BookTypeSection from "./components/Booktype/BookTypeSection";
 import { Footer } from "./components/Footer";
+import Introduction from "./components/Introduction"; // Thêm dòng này
+import ShowTechnology from "./components/Showtechnology/Showtechnology";
+import ShowBannerTechnology from "./components/Showtechnology/Showbannertechnology";
 import "./index.css";
 
 function App() {
@@ -16,6 +19,7 @@ function App() {
       <Header />
       <main className="scroll-smooth">
         <Banner />
+        <Introduction /> {/* Chèn vào đây */}
         <section className="w-full">
           <div className="grid grid-cols-1 lg:grid-cols-3 w-full h-[950px] gap-0">
             <div className="lg:col-span-2 h-full">
@@ -32,6 +36,10 @@ function App() {
         <BookTypeSection
           canvasHeight="800px"
         />
+        <ShowBannerTechnology/>
+        <ShowTechnology />
+        
+        
 
         <Footer bookRef={bookRef} />
       </main>
